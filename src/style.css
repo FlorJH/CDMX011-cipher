@@ -1,0 +1,10 @@
+#contenedor{
+    text-align:center;
+    margin:auto;
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif ;
+    background-color:gainsboro;
+    margin: 8vh 20vw;
+    padding: 3vh 5vw 3vh 5vw;
+    border-radius: 14px;
+    line-height : 25px;
+}
