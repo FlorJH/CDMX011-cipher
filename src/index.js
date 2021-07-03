@@ -1,3 +1,3 @@
-import cipher from './cipher.js';
+import cipher, { encode } from './cipher.js';
 
-console.log(cipher);
+encode(cipher);
