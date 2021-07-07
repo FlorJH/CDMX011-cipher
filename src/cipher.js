@@ -1,43 +1,45 @@
 //import { CLIEngine } from "eslint";
+/* * `src/cipher.js`: acá debes implementar el objeto `cipher`, el cual ya está
+  _exportado_ en el _boilerplate_. Este objeto (`cipher`) debe contener dos
+  métodos:
+  - `cipher.encode(offset, string)`: `offset` es el número de posiciones que
+    queremos mover a la derecha en el alfabeto y `string` el mensaje (texto)
+    que queremos cifrar.
+  - `cipher.decode(offset, string)`: `offset` es el número de posiciones que
+    queremos mover a la izquierda en el alfabeto y `string` el mensaje
+    (texto) que queremos descifrar.*/
 
 
+const cipher = {
+  offset: 0,//da el valor pero en string
+  palabra: '' //darle la referencia del text area
+};  
 
-let cipher = {
-  offset:3,//darle la referencia a campo number
-  palabra:'CASA' //darle la referencia del text area
-};
+export function encode(cipher) {
+  let palabraCifrada = [];
+  let nuevaPosicion;
 
-//encode(cipher);
+  for (let i = 0; i <= cipher.palabra.length - 1; i++) {
 
-export function encode(cipher){
+    if ((cipher.palabra[i].charCodeAt() + cipher.offset) > 122) {
 
-let abcdario=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V',];
-let palabraCifrada=[];
-let nuevaPosicion;
+      nuevaPosicion = (cipher.palabra[i].charCodeAt() + cipher.offset) % 91;
+      palabraCifrada.push(String.fromCharCode(nuevaPosicion));
 
-for(let i=0; i<= cipher.palabra.length-1; i++){
-  //console.log(cipher.palabra[i]);
-  for (let j=0; j <=abcdario.length-1 ; j++) {
-    
-      if ( cipher.palabra[i]== abcdario[j]) {
-        nuevaPosicion= j +cipher.offset; 
-        palabraCifrada.push(abcdario[nuevaPosicion]) ;
-        
-       
+    }
+    else {
+      nuevaPosicion = (cipher.palabra[i].charCodeAt() + cipher.offset);
+      palabraCifrada.push(String.fromCharCode(nuevaPosicion));
+    }
 
-       /* if(j >= abcdario.length )
-        {
-j=(abcdario.length-j)+-1;
-        }*/
-      }
   }
-}
-console.log(palabraCifrada);
-// return palabraCifrada;
-
+  document.getElementById('temporal').innerHTML = ` ${palabraCifrada.join('')}`;
 }
 
 
+export function decode(){
+
+}
 
 
 export default cipher;

@@ -1,10 +1,45 @@
+html{
+    background-size: 100%;
+   /* background: linear-gradient(-90deg, #f26627,#fca874, #efeeee, #98d7d1, #325d79);*/
+   /*background: linear-gradient(to bottom,#ef3d59,#e17a47, #efc958, #4ab19d, #344e5c);*/
+   
+   /*background:linear-gradient(-90deg, #fdea79,#a8a355, #4f4039);*/
+   background-image: url(https://i.pinimg.com/564x/66/95/2d/66952daa69cc3f390d403b7835750f30.jpg);
+  background-attachment: fixed;
+
+}
+html::before{
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(18, 19, 18, 0.521);
+}
+#desplazamiento{
+    margin-bottom: 15px; 
+}
+
 #contenedor{
+    position: relative;
     text-align:center;
     margin:auto;
     font-family: "Gill Sans Extrabold", Helvetica, sans-serif ;
-    background-color:gainsboro;
-    margin: 8vh 20vw;
-    padding: 3vh 5vw 3vh 5vw;
-    border-radius: 14px;
+    background-color:rgba(255, 255, 255, 0.959);
+    margin: 8vh 25vw;
+    padding: 3vh 4vw ;
+    border-radius: 24px;    
     line-height : 25px;
+    box-shadow: 8px 8px 20px rgb(7, 7, 7);
+}
+.BtnCipher{
+    margin: 8px;
+    padding: 5px 5px;
+    text-align: center;
+    width: 130px;
+    height: 50px;
+    font-weight: bold;
+
+
 }

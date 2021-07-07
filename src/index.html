@@ -5,22 +5,25 @@
   <meta charset="utf-8">
   <title>Caesar Cipher</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 </head>
 
-<body>
+<body >
   <div id="root">
     <div id="contenedor">
-      <p>Bienvenido al CODEx</p>
+      <h3>Bienvenido a CODEx</h3>
+      <br>
       <div id="formulario">
         <label for="desplazamiento">Nivel de cifrado:</label>
-        <input type="number" id="name" name="desplazamiento" min="3" max="10" required>
+        <input type="number" id="desplazar" name="desplazamiento" value="3" min="3" max="10" required>
+        <br><br>
+        <textarea name="informe" id="texto" rows="10" cols="60" placeholder="Hola ingresa el informe/mensaje a encriptar/desencriptar">casa</textarea>
         <br>
-        <textarea name="informe" rows="10" cols="50" placeholder="Hola ingresa el informe/mensaje a encriptar/desencriptar"></textarea>
-        <br>
-          <button accesskey="e" type="button">Encriptar</button>
-        <button accesskey="e" type="button">Desencriptar</button>
-        <br>
-        <textarea name="temporal" rows="8" cols="40" >resultado</textarea>
+          <button id="cifrar" class="BtnCipher" accesskey="e"  type="button">Cifrar</button>
+        <button class="BtnCipher" accesskey="d" type="button">Descifrar</button>
+        <br><br>
+        <textarea  id="temporal" rows="8" cols="40" placeholder="Mensaje cifrado/descifrado"></textarea>
         
       </div>
 

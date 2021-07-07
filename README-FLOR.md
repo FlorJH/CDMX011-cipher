@@ -1,3 +1,7 @@
+`README.md`: debe explicar cómo descargar, instalar y ejecutar la aplicación
+  así como una introducción a la aplicación, su funcionalidad y decisiones de
+  diseño que tomaron.
+
 # Cifrado César
 
 ## Publico al que va dirigido
