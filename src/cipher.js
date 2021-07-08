@@ -1,4 +1,4 @@
-//import { CLIEngine } from "eslint";
+
 /* * `src/cipher.js`: acá debes implementar el objeto `cipher`, el cual ya está
   _exportado_ en el _boilerplate_. Este objeto (`cipher`) debe contener dos
   métodos:
@@ -16,6 +16,7 @@ const cipher = {
 };  
 
 export function encode(cipher) {
+  //console.log(cipher.palabra);
   let palabraCifrada = [];
   let nuevaPosicion;
 
@@ -37,8 +38,33 @@ export function encode(cipher) {
 }
 
 
-export function decode(){
 
+
+
+//paso 8.-es menor o igual a 32 ? hacer condición para que reste a partir del 122 
+
+export function decode(cipher){
+  let mensajeDescifrado = [];
+  let realPosicion;
+ 
+  for (let j = 0; j <= cipher.palabra.length - 1; j++) {
+    //console.log(cipher.palabra[j]);
+    if(cipher.palabra[j].charCodeAt() -cipher.offset < 32)
+    {
+      realPosicion=(cipher.palabra[j].charCodeAt() +91) -cipher.offset;
+      mensajeDescifrado.push(String.fromCharCode(realPosicion));
+    }
+    if(cipher.palabra[j].charCodeAt() -cipher.offset <= 122 &&  (cipher.palabra[j].charCodeAt() -cipher.offset) >= 32){
+
+      realPosicion=cipher.palabra[j].charCodeAt() -cipher.offset;
+      mensajeDescifrado.push(String.fromCharCode(realPosicion));
+    }
+     
+  }
+
+  //console.log(mensajeDescifrado);
+  document.getElementById('temporal').innerHTML = ` ${mensajeDescifrado.join('')}`;
+ 
 }
 
 
