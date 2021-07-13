@@ -20,6 +20,12 @@ html::before{
 #desplazamiento{
     margin-bottom: 15px; 
 }
+#texto{
+    margin-bottom: 20px;
+    width:500px;
+    height:150px;
+    border: 2px;
+}
 
 #contenedor{
     position: relative;
@@ -28,18 +34,96 @@ html::before{
     font-family: "Gill Sans Extrabold", Helvetica, sans-serif ;
     background-color:rgba(255, 255, 255, 0.959);
     margin: 8vh 25vw;
-    padding: 3vh 4vw ;
+    padding: 3vh 4vw 5vh 4vw;
     border-radius: 24px;    
     line-height : 25px;
     box-shadow: 8px 8px 20px rgb(7, 7, 7);
 }
-.BtnCipher{
-    margin: 8px;
-    padding: 5px 5px;
-    text-align: center;
-    width: 130px;
-    height: 50px;
-    font-weight: bold;
 
+  .fondoTransparente{
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.226);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+.modal{
+    background: linear-gradient(0deg,white 70%, rgb(61, 163, 1) 30%);
+    width: 600px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   position: absolute;
+    display: flex;
+    flex-direction: column;
+   /* justify-content: space-evenly;*/
+    align-items: center;
+    border-radius: 30px;
 
 }
+.modal_cerrar{
+    background: white;
+    position: absolute;
+    right: -20px;
+    color: rgb(61, 163, 1) 30%;
+    top: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.modal_titulo{
+    padding-top: 20px;;
+    color: white;
+    font-size: 40px;
+}
+.modal_mensaje{            
+    padding: 20px 30px;
+}
+.modal_botones{      
+    width: 100%;    
+ /*  background: whitesmoke;*/
+   border-top:whitesmoke 1px;
+   padding-top: 20px;
+   display: flex;
+   justify-content: space-evenly;
+}
+.boton{
+    background: white;
+    padding: 8px 30px;
+    color: rgb(61, 163, 1) 30%;
+    text-decoration: none;
+    border-radius: 10px;
+    border:1px solid rgb(84, 170, 4)
+}
+.boton:hover{
+    background: rgb(70, 173, 1);
+    color: white;
+}
+
+
+
+@media (max-width: 1129px) {
+    #texto{
+        width:400px;
+        height:150px;
+        border: 2px;
+    }
+   
+  }
+
+  @media (max-width: 1040px) {
+    #texto{
+        width:350px;
+        height:150px;
+        border: 2px;
+    }
+   
+  
+  }

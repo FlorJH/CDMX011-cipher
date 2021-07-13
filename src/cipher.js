@@ -1,71 +1,62 @@
-
-/* * `src/cipher.js`: acá debes implementar el objeto `cipher`, el cual ya está
-  _exportado_ en el _boilerplate_. Este objeto (`cipher`) debe contener dos
-  métodos:
-  - `cipher.encode(offset, string)`: `offset` es el número de posiciones que
-    queremos mover a la derecha en el alfabeto y `string` el mensaje (texto)
-    que queremos cifrar.
-  - `cipher.decode(offset, string)`: `offset` es el número de posiciones que
-    queremos mover a la izquierda en el alfabeto y `string` el mensaje
-    (texto) que queremos descifrar.*/
-
-
 const cipher = {
   offset: 0,//da el valor pero en string
-  palabra: '' //darle la referencia del text area
+  string: '' //darle la referencia del text area
 };  
 
 export function encode(cipher) {
-  //console.log(cipher.palabra);
-  let palabraCifrada = [];
-  let nuevaPosicion;
+  //console.log(cipher.string);
+  const stringCifrada = [];
+  let nuevaPosicion= 0;
 
-  for (let i = 0; i <= cipher.palabra.length - 1; i++) {
+  for (let i = 0; i <= cipher.string.length - 1; i++) {
 
-    if ((cipher.palabra[i].charCodeAt() + cipher.offset) > 122) {
+    if ((cipher.string[i].charCodeAt() + cipher.offset) > 122) {
 
-      nuevaPosicion = (cipher.palabra[i].charCodeAt() + cipher.offset) % 91;
-      palabraCifrada.push(String.fromCharCode(nuevaPosicion));
+      nuevaPosicion = (cipher.string[i].charCodeAt() + cipher.offset) % 91;
+      stringCifrada.push(String.fromCharCode(nuevaPosicion));
 
     }
     else {
-      nuevaPosicion = (cipher.palabra[i].charCodeAt() + cipher.offset);
-      palabraCifrada.push(String.fromCharCode(nuevaPosicion));
+      nuevaPosicion = (cipher.string[i].charCodeAt() + cipher.offset);
+      stringCifrada.push(String.fromCharCode(nuevaPosicion));
     }
 
   }
-  document.getElementById('temporal').innerHTML = ` ${palabraCifrada.join('')}`;
+  
+  
+  document.getElementById('resultado').innerHTML = `${stringCifrada.join('')}`;
+  //return stringCifrada.join('');
 }
 
 
 
 
-
-//paso 8.-es menor o igual a 32 ? hacer condición para que reste a partir del 122 
 
 export function decode(cipher){
   let mensajeDescifrado = [];
   let realPosicion;
  
-  for (let j = 0; j <= cipher.palabra.length - 1; j++) {
-    //console.log(cipher.palabra[j]);
-    if(cipher.palabra[j].charCodeAt() -cipher.offset < 32)
+  for (let j = 0; j <= cipher.string.length - 1; j++) {
+    //console.log(cipher.string[j]);
+   
+    if(cipher.string[j].charCodeAt() -cipher.offset < 32)
     {
-      realPosicion=(cipher.palabra[j].charCodeAt() +91) -cipher.offset;
+      realPosicion=(cipher.string[j].charCodeAt() +91) -cipher.offset;
       mensajeDescifrado.push(String.fromCharCode(realPosicion));
     }
-    if(cipher.palabra[j].charCodeAt() -cipher.offset <= 122 &&  (cipher.palabra[j].charCodeAt() -cipher.offset) >= 32){
-
-      realPosicion=cipher.palabra[j].charCodeAt() -cipher.offset;
+    if(cipher.string[j].charCodeAt() -cipher.offset <= 122 &&  (cipher.string[j].charCodeAt() -cipher.offset) >= 32){
+      
+      realPosicion=cipher.string[j].charCodeAt() -cipher.offset;
       mensajeDescifrado.push(String.fromCharCode(realPosicion));
     }
+   
      
   }
 
   //console.log(mensajeDescifrado);
-  document.getElementById('temporal').innerHTML = ` ${mensajeDescifrado.join('')}`;
+  document.getElementById('resultadoDescifrado').innerHTML = `${mensajeDescifrado.join('')}`;
+ // return mensajeDescifrado.join('');
  
 }
-
 
 export default cipher;
