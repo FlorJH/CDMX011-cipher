@@ -1,21 +1,22 @@
 html{
     background-size: 100%;
-   /* background: linear-gradient(-90deg, #f26627,#fca874, #efeeee, #98d7d1, #325d79);*/
-   /*background: linear-gradient(to bottom,#ef3d59,#e17a47, #efc958, #4ab19d, #344e5c);*/
-   
-   /*background:linear-gradient(-90deg, #fdea79,#a8a355, #4f4039);*/
    background-image: url(https://i.pinimg.com/564x/66/95/2d/66952daa69cc3f390d403b7835750f30.jpg);
- /* background-attachment: fixed;*/
-
 }
 html::before{
+    /*crea un pseudoelemento que es el primer hijo del elemento seleccionado.
+     Es usado normalmente para añadir contenido estético a un elemento*/
 	content:'';
-	position: absolute;
+	position: absolute;/*El elemento con position: absolute no estará dentro del flujo normal de la página 
+    y tomará como referencia la ventana del navegador o el elemento posicionado 
+    (que tenga cualquier valor de position excepto static) más cercano si es padre del elemento que queremos posicionar.*/
     top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	background-color: rgba(18, 19, 18, 0.521);
+}
+#titulo{
+    font-size: 4vh;
 }
 #desplazamiento{
     margin-bottom: 15px; 
@@ -28,16 +29,15 @@ html::before{
 }
 
 #contenedor{
-    position: relative;
+    position: relative;/*Mediante este valor podemos posicionar un elemento respecto al flujo normal de la página.
+     Se podría decir que estamos posicionando un elemento tomando como referencia el flujo normal (la posición por defecto) de dicho elemento.*/
     text-align:center;
-    margin:auto;
     font-family: "Gill Sans Extrabold", Helvetica, sans-serif ;
     background-color:rgba(255, 255, 255, 0.959);
     margin: 18vh 25vw 8vh 25vw;
     padding: 3vh 4vw 5vh 4vw;
     border-radius: 24px;    
-    line-height : 25px;
-    box-shadow: 8px 8px 20px rgb(7, 7, 7);
+    box-shadow: 8px 8px 20px rgb(7, 7, 7); /*desplazamiento en x, y */
 }
 
   .fondoTransparente{
@@ -55,11 +55,11 @@ html::before{
     height: 300px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);/* te permite modificar el espacio de coordenadas del modelo d
+    formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos*/
    position: absolute;
-    display: flex;
+    display: flex;/*indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. */
     flex-direction: column;
-   /* justify-content: space-evenly;*/
     align-items: center;
     border-radius: 30px;
 
@@ -68,15 +68,14 @@ html::before{
     background: white;
     position: absolute;
     right: -20px;
-    color: rgb(61, 163, 1) 30%;
     top: -20px;
     width: 40px;
     height: 40px;
     border-radius: 25px;
-    display: flex;
+    display: flex;/*indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. */
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    cursor: pointer;/*especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento. existen muchos tipos*/
 }
 .modal_titulo{
     padding-top: 20px;;
@@ -88,19 +87,17 @@ html::before{
 }
 .modal_botones{      
     width: 100%;    
- /*  background: whitesmoke;*/
-   border-top:whitesmoke 1px;
    padding-top: 20px;
-   display: flex;
-   justify-content: space-evenly;
+   display: flex; /*indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. */
+   justify-content: space-evenly;/*define cómo el navegador 
+   distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.*/
 }
 .boton{
     background: white;
     padding: 8px 30px;
-    color: rgb(61, 163, 1) 30%;
     text-decoration: none;
     border-radius: 10px;
-    border:1px solid rgb(84, 170, 4)
+    border:1px solid rgb(114, 129, 100)
 }
 .boton:hover{
     background: rgb(70, 173, 1);
@@ -112,8 +109,6 @@ html::before{
 @media (max-width: 1129px) {
     #texto{
         width:400px;
-        height:150px;
-        border: 2px;
     }
    
   }
@@ -121,8 +116,6 @@ html::before{
   @media (max-width: 1040px) {
     #texto{
         width:350px;
-        height:150px;
-        border: 2px;
     }
    
   

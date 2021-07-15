@@ -8,15 +8,13 @@ const cipher = {
     const stringCifrada = [];
     let nuevaPosicion = 0;
 
-    for (let i = 0; i <= string.length - 1; i++) {
+    for (let i = 0; i <= string.length - 1; i++) { 
 
       if ((string[i].charCodeAt() + offset) > 122) {
 
         nuevaPosicion = (string[i].charCodeAt() + offset) % 91;
         stringCifrada.push(String.fromCharCode(nuevaPosicion));
 
-      }if(string.length== 0){
-        break;
       }
       else {
         nuevaPosicion = (string[i].charCodeAt() + offset);
@@ -32,7 +30,7 @@ const cipher = {
 
 
   decode: function (offset, string) {
-    let mensajeDescifrado = [];
+    const mensajeDescifrado = [];
     let realPosicion;
 
     for (let j = 0; j <= string.length - 1; j++) {
