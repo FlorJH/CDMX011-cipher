@@ -4,9 +4,9 @@ html{
 }
 html::before{
     /*crea un pseudoelemento que es el primer hijo del elemento seleccionado.
-     Es usado normalmente para añadir contenido estético a un elemento*/
+     Es usado normalmente para añadir contenido estético a un elemento.-antes*/
 	content:'';
-	position: absolute;/*El elemento con position: absolute no estará dentro del flujo normal de la página 
+	position: absolute;/* absolute no estará dentro del flujo normal de la página 
     y tomará como referencia la ventana del navegador o el elemento posicionado 
     (que tenga cualquier valor de position excepto static) más cercano si es padre del elemento que queremos posicionar.*/
     top: 0;
@@ -17,12 +17,13 @@ html::before{
 }
 #titulo{
     font-size: 4vh;
+    margin-bottom: 45px;
 }
-#desplazamiento{
-    margin-bottom: 15px; 
+#desplazar{
+    margin-bottom: 25px; 
 }
 #texto{
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     width:500px;
     height:150px;
     border: 2px;
@@ -30,11 +31,12 @@ html::before{
 
 #contenedor{
     position: relative;/*Mediante este valor podemos posicionar un elemento respecto al flujo normal de la página.
-     Se podría decir que estamos posicionando un elemento tomando como referencia el flujo normal (la posición por defecto) de dicho elemento.*/
+     Se podría decir que estamos posicionando un elemento tomando como referencia el flujo normal (la posición por defecto)
+      de dicho elemento. Cuando el elemento se mueve, ningún otro elemento del diseño se verá afectado.*/
     text-align:center;
     font-family: "Gill Sans Extrabold", Helvetica, sans-serif ;
     background-color:rgba(255, 255, 255, 0.959);
-    margin: 18vh 25vw 8vh 25vw;
+    margin: 18vh 25vw ;
     padding: 3vh 4vw 5vh 4vw;
     border-radius: 24px;    
     box-shadow: 8px 8px 20px rgb(7, 7, 7); /*desplazamiento en x, y */

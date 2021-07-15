@@ -34,7 +34,6 @@ const cipher = {
     let realPosicion;
 
     for (let j = 0; j <= string.length - 1; j++) {
-      //console.log(cipher.string[j]);
 
       if (string[j].charCodeAt() - offset < 32) {
         realPosicion = (string[j].charCodeAt() + 91) - offset;
