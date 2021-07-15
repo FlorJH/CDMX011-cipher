@@ -1,4 +1,4 @@
-import cipher, { decode, encode } from './cipher.js';
+import cipher from './cipher.js';
 
 
 //eventos de botones
@@ -7,7 +7,8 @@ btnCifrar.addEventListener('click', function () {
   //Datos 
   cipher.offset = Number(document.getElementById('desplazar').value);
   cipher.string = document.getElementById('texto').value;
-  encode(cipher);
+  document.getElementById('resultado').innerHTML= cipher.encode(cipher.offset, cipher.string);
+  
   //modal
   document.getElementsByClassName("fondoTransparente")[0].style.display="block";
 });
@@ -18,7 +19,7 @@ btnDescifrar.addEventListener('click', function () {
   //Datos 
   cipher.offset = Number(document.getElementById('desplazar').value);
   cipher.string = document.getElementById('texto').value;
-  decode(cipher)
+  document.getElementById('resultadoDescifrado').innerHTML = cipher.decode(cipher.offset, cipher.string);
   //modal
   document.getElementsByClassName("fondoTransparente")[1].style.display="block";
 });
@@ -44,6 +45,7 @@ btnCopiar.addEventListener('click',function(){
   copiar.select();
   document.execCommand('copy');
 });
+
 let btnCopiarDescifrado = document.getElementById('copiarDescifrado');
 btnCopiarDescifrado.addEventListener('click',function(){
   let copia= document.getElementById('resultadoDescifrado');
