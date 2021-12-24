@@ -1,0 +1,133 @@
+html{
+    background-size: 100%;
+   background-image: url(https://i.pinimg.com/564x/66/95/2d/66952daa69cc3f390d403b7835750f30.jpg);
+}
+.no_scroll{
+    overflow:hidden;
+}
+html::before{
+    /*crea un pseudoelemento que es el primer hijo del elemento seleccionado.
+     Es usado normalmente para añadir contenido estético a un elemento.-antes*/
+	content:'';
+	position: absolute;/* absolute no estará dentro del flujo normal de la página 
+    y tomará como referencia la ventana del navegador o el elemento posicionado 
+    (que tenga cualquier valor de position excepto static) más cercano si es padre del elemento que queremos posicionar.*/
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(18, 19, 18, 0.521);
+}
+#titulo{
+    font-size: 4vh;
+    margin-bottom: 45px;
+}
+#desplazar{
+    margin-bottom: 25px; 
+}
+#texto{
+    margin-bottom: 25px;
+    width:500px;
+    height:150px;
+    border: 2px;
+}
+
+#contenedor{
+    position: relative;/*Mediante este valor podemos posicionar un elemento respecto al flujo normal de la página.
+     Se podría decir que estamos posicionando un elemento tomando como referencia el flujo normal (la posición por defecto)
+      de dicho elemento. Cuando el elemento se mueve, ningún otro elemento del diseño se verá afectado.*/
+    text-align:center;
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif ;
+    background-color:rgba(255, 255, 255, 0.959);
+    margin: 18vh 25vw ;
+    padding: 3vh 4vw 5vh 4vw;
+    border-radius: 24px;    
+    box-shadow: 8px 8px 20px rgb(7, 7, 7); /*desplazamiento en x, y */
+}
+
+  .fondoTransparente{
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.226);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+.modal{
+    background: linear-gradient(0deg,white 70%, rgb(61, 163, 1) 30%);
+    width: 600px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);/* te permite modificar el espacio de coordenadas del modelo d
+    formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos*/
+   position: absolute;
+    display: flex;/*indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. */
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+
+}
+.modal_cerrar{
+    background: white;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    display: flex;/*indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;/*especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento. existen muchos tipos*/
+}
+.modal_titulo{
+    padding-top: 20px;;
+    color: white;
+    font-size: 40px;
+}
+.modal_mensaje{            
+    padding: 20px 30px;
+}
+.modal_botones{      
+    width: 100%;    
+   padding-top: 20px;
+   display: flex; /*indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. */
+   justify-content: space-evenly;/*define cómo el navegador 
+   distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.*/
+}
+.boton{
+    background: white;
+    padding: 8px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    border:1px solid rgb(114, 129, 100)
+}
+.boton:hover{
+    background: rgb(70, 173, 1);
+    color: white;
+}
+
+#mensaje{
+    background-color: greenyellow;
+    border-radius: 50px;
+    position: relative;
+    margin-left: 93vw;
+    width: 50px;
+}
+
+@media (max-width: 1129px) {
+    #texto{
+        width:400px;
+    }
+   
+  }
+
+  @media (max-width: 1040px) {
+    #texto{
+        width:350px;
+    }
+   
+  
+  }
