@@ -21,6 +21,20 @@
     "htmlhint": "^0.14.1",
     "jest": "^27.0.1",
     "opener": "^1.5.1",
-    "serve": "^12.0.0"
-  }
+    "serve": "^12.0.0",
+    "sweetalert2": "^11.3.0"
+  },
+  "description": "* [1. Contexto](#1-Contexto)\r * [2. Instalación](#2-Instalación)\r * [3. Funcionalidad](#3-Funcionalidad)",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlorJH/CDMX011-cipher.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/FlorJH/CDMX011-cipher/issues"
+  },
+  "homepage": "https://github.com/FlorJH/CDMX011-cipher#readme"
 }

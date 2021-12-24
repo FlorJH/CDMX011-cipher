@@ -32,14 +32,22 @@ Para poder acceder de manera local a esta solución es necesario seguir los sigu
  
 ### 3.-Funcionalidad
  
-Mi solución está compuesta por un contenedor en el cual coloque los campos que se requiere que el usuario ingrese tales como, offset y el texto a cifrar/descifrar, en la parte inferior se encontrarán 3 controles los cuales te permitiran cifrar / limpiar campo / Descifrar, por ahora no tiene validaciones que controlen el querer cifrar/descifrar  un campo vacío, por lo que es posible hacer eso.
+Mi solución está compuesta por un contenedor en el cual coloque los campos que se requiere que el usuario ingrese tales como, offset y el texto a cifrar/descifrar.
+![Image text](https://github.com/FlorJH/CDMX011-cipher/blob/master/src/assets/principal.png?raw=true)
+ en la parte inferior se encontrarán 3 controles los cuales te permitiran cifrar / limpiar campo / Descifrar, por ahora no tiene validaciones que controlen el querer cifrar/descifrar  un campo vacío, por lo que es posible hacer eso.
  
-el funcionamiento esperado por parte del usuario es el siguiente
+El funcionamiento esperado por parte del usuario es el siguiente
 1.-Ingresar un nivel de cifrado, por defecto estará el 3.
-2.-Ingresar el texto para cifrar/descifrar.-
+2.-Ingresar el texto para cifrar/descifrar.
+![Image text](https://github.com/FlorJH/CDMX011-cipher/blob/master/src/assets/cifrar.png?raw=true)
+
 3.-Una vez ingresado el texto, dar clic en el botón Cifrar.
 4.-Al dar clic abrirá un modal con el texto cifrado dentro, el usuario podrá copiar el texto dando clic en botón copiar.
-5.-Para cifrar requiere ingresar el texto en el textbox y el nivel de desplazamiento, si el nivel de desplazamiento no es el correcto el mensaje descifrado no será correcto.
- 
- 
- 
+![Image text](https://github.com/FlorJH/CDMX011-cipher/blob/master/src/assets/cifrado.png?raw=true)
+
+5.-Para descifrar requiere ingresar el texto en el textbox y el nivel de desplazamiento, si el nivel de desplazamiento no es el correcto el mensaje descifrado no será correcto.
+![Image text](https://github.com/FlorJH/CDMX011-cipher/blob/master/src/assets/des.png?raw=true)
+
+6.-Por ultimo se requiere dar clic en el btn de "Descifrar"
+![Image text](https://github.com/FlorJH/CDMX011-cipher/blob/master/src/assets/descifrar.png?raw=true)
+

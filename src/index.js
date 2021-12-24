@@ -1,5 +1,5 @@
 import cipher from './cipher.js';
-
+// import Swal from '../sweetalert2/dist/sweetalert2.js'
 
 //eventos de botones
 const btnCifrar = document.getElementById('cifrar');
@@ -12,7 +12,6 @@ btnCifrar.addEventListener('click', function () {
   //modal
   document.getElementsByClassName("fondoTransparente")[0].style.display="block";
 });
-
 
 const btnDescifrar = document.getElementById('descifrar');
 btnDescifrar.addEventListener('click', function () {
@@ -53,3 +52,10 @@ btnCopiarDescifrado.addEventListener('click',function(){
   document.execCommand('copy');
 });
 
+
+const btnInfo=document.getElementById('mensaje');
+btnInfo.addEventListener('click',function(){
+  
+  Swal.fire({text:'Hola, esta es herramienta enfocada a ayudar cifrar mensajes para guardabosques quienes tienen como una de sus tareas el monitoreo biológico de las especies que habitan en un área asignada.'})
+ 
+})

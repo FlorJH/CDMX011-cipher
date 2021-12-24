@@ -4,7 +4,6 @@ const cipher = {
 
 
   encode: function (offset, string) {
-    //console.log(cipher.string);
     const stringCifrada = [];
     let nuevaPosicion = 0;
 
@@ -48,7 +47,6 @@ const cipher = {
 
     }
 
-    //document.getElementById('resultadoDescifrado').innerHTML = `${mensajeDescifrado.join('')}`;
     return (mensajeDescifrado.join(''));
 
   }

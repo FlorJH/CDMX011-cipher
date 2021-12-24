@@ -2,6 +2,9 @@ html{
     background-size: 100%;
    background-image: url(https://i.pinimg.com/564x/66/95/2d/66952daa69cc3f390d403b7835750f30.jpg);
 }
+.no_scroll{
+    overflow:hidden;
+}
 html::before{
     /*crea un pseudoelemento que es el primer hijo del elemento seleccionado.
      Es usado normalmente para añadir contenido estético a un elemento.-antes*/
@@ -106,7 +109,13 @@ html::before{
     color: white;
 }
 
-
+#mensaje{
+    background-color: greenyellow;
+    border-radius: 50px;
+    position: relative;
+    margin-left: 93vw;
+    width: 50px;
+}
 
 @media (max-width: 1129px) {
     #texto{

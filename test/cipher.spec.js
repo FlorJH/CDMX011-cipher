@@ -22,34 +22,9 @@ describe('cipher', () => {
     it('should return "abcdefghijklmnopqrstuvwxyz" for "ABCDEFGHIJKLMNOPQRSTUVWXYZ" with offset 32', () => {
       expect(cipher.encode(32, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')).toBe('abcdefghijklmnopqrstuvwxyz');
     });
-
-    // Hacker edition
-    //
-    // [Español]
-    // Si decides agregar soporte para minúsculas descomenta el test a
-    // continuación.
-    //
-    // [Português]
-    // Se quiser adicionar testes para letras minúsculas, descomente o teste
-    // abaixo.
-    //
      it('should return "ABCDEFGHIJKLMNOPQRSTUVWXYZ" for "abcdefghijklmnopqrstuvwxyz" with offset 59', () => {
       expect(cipher.encode(59, 'abcdefghijklmnopqrstuvwxyz')).toBe('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
     });
-
-    // Hacker edition
-    //
-    // [Español]
-    // Si decides implementar soporte para caracteres no alfabéticos descomenta
-    // el test a continuación.
-    //
-    // [Português]
-    // Se quiser adicionar testes para caracteres não alfabéticos, descomente o
-    // teste abaixo.
-    //
-    // it('should return " !@" for " !@"', () => {
-    //   expect(cipher.encode(33, ' !@')).toBe(' !@');
-    // });
   });
 
   describe('cipher.decode', () => {
@@ -68,35 +43,9 @@ describe('cipher', () => {
     it('should return "ABCDEFGHIJKLMNOPQRSTUVWXYZ" for "abcdefghijklmnopqrstuvwxyz" with offset 32', () => {
       expect(cipher.decode(32, 'abcdefghijklmnopqrstuvwxyz')).toBe('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
     });
-
-    //
-    // Hacker edition
-    //
-    // [Español]
-    // Si decides agregar soporte para minúsculas descomenta el test a
-    // continuación.
-    //
-    // [Português]
-    // Se quiser adicionar testes para letras minúsculas, descomente o teste
-    // abaixo.
-    //
      it('should return "abcdefghijklmnopqrstuvwxyz" for "ABCDEFGHIJKLMNOPQRSTUVWXYZ" with offset 59', () => {
        expect(cipher.decode(59, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')).toBe('abcdefghijklmnopqrstuvwxyz');
      });
-
-    // Hacker edition
-    //
-    // [Español]
-    // Si decides implementar soporte para caracteres no alfabéticos descomenta
-    // el test a continuación.
-    //
-    // [Português]
-    // Se quiser adicionar testes para caracteres não alfabéticos, descomente o
-    // teste abaixo.
-    //
-    // it('should return " !@" para " !@"', () => {
-    //   expect(cipher.decode(33, ' !@')).toBe(' !@');
-    // });
   });
 
 });
